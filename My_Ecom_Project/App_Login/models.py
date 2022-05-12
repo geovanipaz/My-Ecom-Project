@@ -38,6 +38,7 @@ class User(AbstractBaseUser,PermissionsMixin):
     )
     is_active = models.BooleanField(
         ugettext_lazy('active'),
+        default=True,
         help_text= ugettext_lazy('Designates whether the user shold be treatea is active')
     )
     USERNAME_FIELD = 'email'

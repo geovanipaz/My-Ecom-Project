@@ -11,7 +11,7 @@
     <form method="POST">
         {{form|crispy}}
         {% csrf_token %}
-        <button type="submit" class="btn btn-sucess btn-sm">Login</button>
+        <button type="submit" class="btn btn-success btn-sm">Login</button>
     </form>
     <br>
     <p>Doesn't have an Account? <a href="{% url 'App_Login:signup' %}"
