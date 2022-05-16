@@ -13,27 +13,82 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 
    <style>
-     
+    .card{
+      height: 350px;
+    }
+    .card-product:after{
+     content: "";
+     display: table;
+     clear: both;
+     visibility: hidden;
+    }
+    .card-product .price-new, .card-product .price{
+      margin-right: 5px;
+    }
+    .card-product .price-old{
+      color: #999;
+    }
+    .card-product .img-wrap{
+      border-radius: 3px 3px 0 0;
+      overflow: hidden;
+      position: relative;
+      height: 220px;
+      text-align: center;
+    }
+
+    .card-product .img-wrap img{
+      max-hidth: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    .card-product .info-wrap{
+       overflow: hidden;
+       padding: 15px;
+       border-top: 1px solid #eee;
+    }
+    .card-product .action-wrap{
+      padding-top: 4px;
+      margin-top: 4px;
+    }
+
+    .card-product .bottom wrap{
+     padding: 15px;
+     border-top: 1px solid #eee;
+    }
+    .card-product .title{
+      margin-top: 0px;
+      
+    }
+
+
+
    </style>
        
 
   </head>
   <body>
-    
+    {% include 'navbar.html' %}
 
    
     <br>
     <div class="container" style="padding-top 20px;">
-      <div class="massages container mt-2">
+      <div class="messages container mt-2">
         
           {% if messages %}
           {% for message in messages %}
-            <div {% if message.tags %} class="alert alert-{{message.tags}}
-             {% endif %}" role="alert">
-              {{message}}
-              <button type="button" class="close" data-dismiss="alert" aria-level="Close">
+            <div {% if message.tags %} class="alert alert-{{message.tags}} 
+            alert-dismissible fade show"
+                {% endif %} role="alert">
+                {{message}}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            
+              <!--
+                <button type="button" class="close" data-dismiss="alert" aria-level="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
+              -->
+              
             </div>
           {% endfor %}
         {% endif %}

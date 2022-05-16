@@ -17,7 +17,9 @@
               <div class="action-wrap">
                 <div class="price-wrap h5">
                   <span class="price-new">$ {{product.price|floatformat:2}}</span>
-                    <span class="price-old">$ {{product.old_price|floatformat:2}}</span>
+                    <span class="price-old">
+                      <strike>$ {{product.old_price|floatformat:2}}</strike>
+                      </span>
                 </div>
               </div>
             </figcaption>
