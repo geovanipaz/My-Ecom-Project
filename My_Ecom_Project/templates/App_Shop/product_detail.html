@@ -30,7 +30,7 @@
                             <p>{{object.details_text|linebreaks}}</p>
                         </dd>
                     </dl>
-                    <a href="" class="btn btn-lg btn-outline-primary text-uppercase">
+                    <a href="{% url 'App_Order:add' object.pk %}" class="btn btn-lg btn-outline-primary text-uppercase">
                         <i class="bi bi-cart" style="font-size:24px;"></i>
                         Add to Cart
                     </a>
