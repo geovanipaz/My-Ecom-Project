@@ -22,13 +22,13 @@
                   
                   <td>{{cart.item.name}}</td>
                   <td>
-                    <a href="" class="mr-2">
+                    <a href="{% url 'App_Order:decrease' cart.item.pk %}" class="mr-2">
                         
                         <i class="bi bi-dash-circle"></i>
                         
                     </a>
                       {{cart.quantity}}
-                    <a href="" class="mr-2">
+                    <a href="{% url 'App_Order:increase' cart.item.pk %}" class="mr-2">
                         
                         <i class="bi bi-plus-circle"></i>
                         
